@@ -4,7 +4,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: {
-    hmr: process.env.DISABLE_HMR !== 'true',
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
   },
 });
